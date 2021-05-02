@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>AnimaLizer</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -16,8 +16,67 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section id="main"  data-background-color="black" data-auto-animate>
+					<h1 style="color:black;">(Animal)izer</h1>
+				</section>
+				<section id="main" data-background-transition="zoom" data-background-color="white" data-auto-animate>
+					<h1 style="color:red;">(Animal)<span style="color:green;">izer</span></h1>
+				</section>
+				<section>
+					<section id="cosa" data-background-color="lightgreen" data-markdown="./slides/cosa.md"></section>
+					<section id="motivo" data-background-color="lightgreen" data-markdown="./slides/motivo.md"></section>
+				</section>
+				<section>
+					<section id="come" data-background-color="aquamarine" data-markdown="./slides/come.md" ></section>
+					<section id="fototrappola" data-background-color="aquamarine">
+						<h2 style="color: yellowgreen">La fototrappola</h2>
+						<p>Sarà gestita da un <a href="https://www.raspberrypi.org/products/raspberry-pi-zero/" target="_blank">raspberry</a> <br>
+						che controllerà una videocamera e un microfono.</p>
+						<p>I dati saranno poi mandati alla <a href="#/stazione">stazione</a></p>
+						<img style="max-width: 29%; display: flexbox;" src="./img/fototrappola.jpeg" title="progetto iniziale fototrappola" alt="raspberry-pi-zero">
+					</section>
+					<section id="stazione" data-background-color="aquamarine"> 
+						<h2 style="color:crimson">La stazione</h2>
+						<p>La stazione avrà le stesse funzionalià <br>
+							della fototrappola, ma in più raccoglierà <br>
+							le informazioni dalle altre fototrappole <br>
+							e avrà un modulo sim per inviarle ad un server <br>
+							dove poi saranno processate</p>
+					</section>
+				</section>
+				<section>
+					<section id="ai" data-background-color="gray" data-markdown="./slides/ai.md"></section>
+					<section id="sito" data-background-image="./img/maps.png">
+						<div style="background-color: gray;opacity: 0.8;">
+							<h2>Il sito</h2>
+							<p>Costruiremo un sito dove metteremo <br>
+							   tutti gli avvistamenti degli animali <br>
+							   che i dispositivi installati faranno <br>
+							   In questo modo tutti avranno la possibilità <br>
+							   di vedere la biodiversità dei vari luoghi <br>
+							   dove è presente un <span style="color: red;">(Animal)</span><span style="color: green;" >izer</span> 
+							</p>
+						</div>
+						
+					</section>
+				</section>
+				<section id="futuro" data-background-color="purple">
+					<h2>Possibili miglioramenti</h2>
+					<p>In futuro abbiamo pensato che <span style="color: red;">(Animal)</span><span style="color: green;" >izer</span> <br>
+					potrebbe essere migliorato facendolo <br>
+					diventare un rover autonomo che esegue <br>
+					non solo il riconoscimento della fauna <br>
+					ma anche quello della flora.</p>
+				</section>
+				<section id="team" data-background-color="rgb(141, 10, 10)">
+					<p>Un progetto ideato da: </p>
+					<ul>
+						<li>Leonardo Bolognese</li>
+						<li>Leonardo Rossoni</li>
+						<li>Fabio Spadaro</li>
+						<li>Matteo Furlato</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
@@ -35,6 +94,8 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+			
 		</script>
+
 	</body>
 </html>
